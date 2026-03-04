@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* KBZ Brand */
+  --kbz-blue: #005BAC;
+  --kbz-blue-dark: #003D73;
+  --kbz-blue-mid: #0074D9;
+  --kbz-blue-light: #E8F4FD;
+  --kbz-blue-50: #F0F7FF;
+  --kbz-gold: #F5A623;
+  --kbz-gold-light: #FFF8E1;
+  --kbz-green: #00A650;
+  --kbz-green-light: #ECFDF3;
+  --kbz-red: #E53935;
+  --kbz-red-light: #FFF0F0;
+
+  /* Neutral */
+  --bg: #F0F2F7;
+  --card: #FFFFFF;
+  --card-border: rgba(0,0,0,0.05);
+  --text-primary: #101828;
+  --text-secondary: #556677;
+  --text-muted: #94A3B8;
+  --border: #E2E8F0;
+  --border-focus: #005BAC;
+  --input-bg: #F7F9FC;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.07);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.10);
+  --shadow-btn: 0 3px 10px rgba(0,91,172,0.28);
+
+  /* Radius */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--text-primary);
+}
+
+button {
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  padding: 0.65rem 1.15rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  font-family: inherit;
+  background: var(--card);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1.4;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+button:hover:not(:disabled) {
+  border-color: var(--kbz-blue);
+  color: var(--kbz-blue);
+  box-shadow: var(--shadow-xs);
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+input:focus,
+button:focus-visible {
+  outline: 2px solid var(--kbz-blue);
+  outline-offset: 2px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.3); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.15); }
+  70% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}

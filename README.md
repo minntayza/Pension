@@ -1,40 +1,71 @@
-# Pension Mini App (Frontend)
 
-React frontend prototype for App Cube, implemented from the provided Pension BRD.
+---
 
-## Implemented flows
+## 2) `Pension` — polished version
 
-- Scenario 1: Withdraw Pension
-  - Step-based navigation: Identity & OTP → Biometric Verify → Review & Confirm → Success
-  - Validation for Pensioner No, Pension Card No, OTP, and PIN
-  - Retry and lockout protection for OTP and PIN flows
-  - Loading and failure states for every async action
-  - Success screen with downloadable E-receipt
+**GitHub About line**  
+`Frontend prototype for a pension mini app with OTP, biometric verification, bilingual UI, and representative workflows.`
 
-- Scenario 2: Pensioner Representative
-  - Representative list with status badges (`APPROVED`, `PENDING`, `UNDER REVIEW`)
-  - Representative request form with validation + PIN confirmation
-  - Status polling simulation (`PENDING` → `UNDER REVIEW` → `APPROVED`)
-  - Approved members can directly launch withdrawal with pre-filled identity
+```md
+# Pension Mini App Prototype
 
-## Competition-ready enhancements
+A frontend prototype for a pension mini app built from a business requirements document (BRD). The application focuses on secure pension withdrawal flows, representative handling, and a simple bilingual user experience.
 
-- Bilingual UI toggle (EN/MM)
-- Mock API service layer for OTP, biometric, withdrawal, representative requests, and polling
-- Analytics event hook for key journey checkpoints (OTP request/verify, withdrawal success, status updates)
-- Sensitive data cleanup after successful withdrawal (OTP and PIN reset)
+## Overview
 
-## Run locally
+This project was designed as a competition-ready mini app prototype. It simulates a real digital financial service journey by combining identity verification, OTP validation, biometric checks, review steps, and digital receipt generation.
+
+## Main User Flows
+
+### 1. Withdraw Pension
+- Identity and OTP verification
+- Biometric / face verification
+- Review and confirm
+- Success screen with E-receipt
+
+### 2. Pensioner Representative
+- View representative members and statuses
+- Submit representative request
+- Poll approval status updates
+- Start withdrawal flow with pre-filled identity when approved
+
+## Key Features
+
+- OTP request and verification flow
+- Retry and temporary lockout protection
+- PIN validation
+- Biometric / liveness-style verification flow
+- Bilingual UI (English / Myanmar)
+- Representative request workflow
+- Mock API service layer for realistic frontend behavior
+- Analytics event hooks for key checkpoints
+- Success screen with E-receipt flow
+- Sensitive data cleanup after successful actions
+
+## Tech Stack
+
+- **Frontend:** React, Vite, JavaScript
+- **State/UI Logic:** React Hooks
+- **Mock Services:** Custom mock API layer
+- **Other Concepts:** Validation, analytics hooks, bilingual content
+
+## Screenshots
+
+> Add screenshots in `/screenshots`.
+
+- Home / flow selection  
+  `![Home](./screenshots/home.png)`
+- OTP verification  
+  `![OTP](./screenshots/otp.png)`
+- Biometric verification  
+  `![Biometric](./screenshots/biometric.png)`
+- Success / receipt screen  
+  `![Receipt](./screenshots/receipt.png)`
+
+## Run Locally
 
 ```bash
+git clone https://github.com/minntayza/Pension.git
+cd Pension
 npm install
 npm run dev
-```
-
-Open `http://localhost:5173`.
-
-## Build
-
-```bash
-npm run build
-```
